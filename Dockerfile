@@ -30,5 +30,5 @@ USER appuser
 # Expose port (Railway will set PORT environment variable)
 EXPOSE $PORT
 
-# Start command with container test
-CMD ["python", "test_container.py"]
+# Start command for production
+CMD ["python", "run.py"]
