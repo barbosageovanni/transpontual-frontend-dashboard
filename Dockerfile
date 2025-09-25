@@ -30,5 +30,5 @@ USER appuser
 # Expose port (Railway will set PORT environment variable)
 EXPOSE $PORT
 
-# Start command for production
-CMD ["python", "run.py"]
+# Start command for production with Gunicorn
+CMD ["gunicorn", "-c", "gunicorn_config.py", "run:app"]
