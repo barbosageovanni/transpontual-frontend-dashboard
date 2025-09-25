@@ -3,4 +3,4 @@ builder = "dockerfile"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "gunicorn -c gunicorn_config.py wsgi:application"
+startCommand = "python debug_startup.py && gunicorn -c gunicorn_config.py wsgi:application"
