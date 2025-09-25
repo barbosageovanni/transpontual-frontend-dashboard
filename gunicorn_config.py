@@ -11,15 +11,16 @@ worker_connections = 1000
 max_requests = 1000
 max_requests_jitter = 100
 
-# Timeouts
-timeout = 30
-keepalive = 2
+# Timeouts (mais generosos para Railway)
+timeout = 120
+keepalive = 5
 
-# Logging
+# Logging (verbose para debug)
 accesslog = "-"
 errorlog = "-"
-loglevel = "info"
+loglevel = "debug"
 access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
+capture_output = True
 
 # Processo
 preload_app = True
