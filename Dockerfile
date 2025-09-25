@@ -31,4 +31,4 @@ USER appuser
 EXPOSE $PORT
 
 # Start command for production with Gunicorn
-CMD ["gunicorn", "-c", "gunicorn_config.py", "run:app"]
+CMD ["gunicorn", "-c", "gunicorn_config.py", "wsgi:application"]
